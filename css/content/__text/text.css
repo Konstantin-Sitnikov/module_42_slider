@@ -1,0 +1,43 @@
+
+
+
+.content__header {
+    color: #E3B873;
+}
+
+
+.content__header--main {
+    font-size: 27px;
+    line-height: 138.6%;
+    letter-spacing: -7%;
+}
+
+.content__header--info {
+    font-size: 18px;
+    line-height: 138.6%;
+    letter-spacing: 0%;
+}
+
+.content__header--link {
+    font-size: 14px;
+    line-height: 138.6%;
+    letter-spacing: 0%;
+}
+
+
+
+
+
+.content__text {
+    color: #FFFFFF;
+}
+
+.content__text--main {
+    font-size: 14px;
+    line-height: 191%;
+    letter-spacing: 0%;
+}
+
+
+
+
