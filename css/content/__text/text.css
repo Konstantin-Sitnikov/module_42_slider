@@ -1,43 +1,65 @@
 
 
 
-.content__header {
-    color: #E3B873;
-}
-
-
-.content__header--main {
-    font-size: 27px;
-    line-height: 138.6%;
-    letter-spacing: -7%;
-}
-
-.content__header--info {
-    font-size: 18px;
-    line-height: 138.6%;
-    letter-spacing: 0%;
-}
-
-.content__header--link {
-    font-size: 14px;
-    line-height: 138.6%;
-    letter-spacing: 0%;
-}
-
 
 
 
 
 .content__text {
     color: #FFFFFF;
+    position: absolute;
 }
 
-.content__text--main {
+.content__text--preview {
     font-size: 14px;
     line-height: 191%;
     letter-spacing: 0%;
+
+    top: 276.36px;
+    left: 134px;
+
+    width: 442px;
+    height: 86px;
+    text-wrap: wrap;
 }
 
 
+.content__text--info {
+    font-size: 13px;
+    line-height: 163.7%;
+    letter-spacing: 0%;
+}
 
+.content__text--city {
+    top: 435.36px;
+    left: 134px;
+    width: 161px;
+    height: 42px;
+}
 
+.content__text--area {
+    top: 435.36px;
+    left: 324px;
+    width: 51px;
+    height: 21px;
+}
+.content__text--area::after {
+    content: " m2";
+}
+
+.content__text--repair-time {
+    top: 542.36px;
+    left: 134px;
+    width: 103px;
+    height: 24px;
+}
+.content__text--repair-time::after {
+    content: " months";
+}
+
+.content__text--repair-cost {
+    top: 542.36px;
+    left: 324px;
+    width: 115px;
+    height: 24px;
+}

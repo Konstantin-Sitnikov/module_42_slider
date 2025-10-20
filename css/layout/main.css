@@ -5,11 +5,8 @@
 }
 
 .body {
-    width: 1440;
-    height: 783;
+    width: 1440px;
+    height: 783px;
     background-color: #131313;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }

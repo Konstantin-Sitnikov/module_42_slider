@@ -1,0 +1,83 @@
+.content__header {
+    font-family: YesevaOne-Regular;
+    color: #E3B873;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+
+.content__header--main {
+    width: 253px;
+    height: 66px;
+    font-size: 27px;
+    line-height: 138.6%;
+    letter-spacing: -7%;
+    top: 176.36px;
+    left: 134px;
+}
+
+.content__header--info {
+    font-size: 18px;
+    line-height: 138.6%;
+    letter-spacing: 0%;
+}
+
+.content__header--city {
+    top: 404.36px;
+    left: 134px;
+    width: 66px;
+    height: 22px;
+}
+
+
+.content__header--area {
+    top: 404.36px;
+    left: 324px;
+    width: 213px;
+    height: 22px;
+}
+
+.content__header--repair-time {
+    top: 511.36px;
+    left: 134px;
+    width: 156px;
+    height: 22px;
+}
+
+
+.content__header--repair-cost {
+    top: 511.36px;
+    left: 324px;
+    width: 218px;
+    height: 22px;
+}
+
+
+
+
+
+
+.content__header--link {
+    position: relative;
+    font-size: 14px;
+    line-height: 138.6%;
+    letter-spacing: 0%;
+
+    text-wrap: nowrap;
+
+}
+
+
+.content__link {
+    padding-bottom: 6.68px;
+    text-decoration: none;
+
+}
+
+
+
+
+.content__link--active {
+    border-bottom: 1px solid #E3B873;
+}
+

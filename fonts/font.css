@@ -1,0 +1,6 @@
+    @font-face {
+        font-family: "YesevaOne-Regular";
+        src: local("YesevaOne-Regular"),
+                url("YesevaOne-Regular.woff") format("woff");
+    }
+

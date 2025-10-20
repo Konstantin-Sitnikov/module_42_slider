@@ -1,7 +1,13 @@
 @import url(__text/text.css);
 @import url(__container/container.css);
+@import url(__header/header.css);
 
 .content {
-    width: 1171;
-    height: 552.28;
+    width: 1171px;
+    height: 552.28px;
+    position: absolute;
+    top: 107px;
+    left: 134px;
 }
+
+

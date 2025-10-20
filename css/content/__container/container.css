@@ -1,12 +1,28 @@
 
 
 .content__container {
-    display: flex;
+    position: absolute;
 }
 
-.content__container--info {
+.content__container--line {
+
+    top: 231px;
+    left: 310px;
+    width: 92px;
+    height: 1px;
+    background-color: #E3B873;
+
+}
+
+
+.content__container--nav {
+    top: 107px;
+    left: 626px;
+    display: flex;
+    gap: 60.5px;
+}
+
+
+.content__container--img {
     
-    flex-direction: column;
-    width: 442px;
-    height: 390px;
 }
