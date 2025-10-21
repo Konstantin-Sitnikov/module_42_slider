@@ -45,7 +45,7 @@
 }
 
 
-.content__header--repair-cost {
+.content__header--repair-rcost {
     top: 511.36px;
     left: 324px;
     width: 218px;
@@ -57,27 +57,26 @@
 
 
 
-.content__header--link {
+.content__header--nav {
     position: relative;
     font-size: 14px;
     line-height: 138.6%;
     letter-spacing: 0%;
+    color: rgba(255, 255, 255, 0.3);
 
     text-wrap: nowrap;
-
-}
-
-
-.content__link {
     padding-bottom: 6.68px;
-    text-decoration: none;
+    cursor: pointer;
 
 }
 
 
 
 
-.content__link--active {
+
+.content__header--active {
+    
+    color: #E3B873;
     border-bottom: 1px solid #E3B873;
 }
 

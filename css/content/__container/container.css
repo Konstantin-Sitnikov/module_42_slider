@@ -16,13 +16,71 @@
 
 
 .content__container--nav {
+    position: relative;
     top: 107px;
     left: 626px;
+    width: 623px;
+    height: 24px;
     display: flex;
     gap: 60.5px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.content__container--nav:hover {
+    overflow-x: auto;
+    scrollbar-width: thin;
 }
 
 
 .content__container--img {
-    
+    top: 176.36px;
+    left: 626px;
+    width: 679px;
+    height: 482.38px;
+    overflow: hidden;
 }
+
+
+
+.content__container--selector {
+    top: 646px;
+    left: 135px;
+    width: 250px;
+    height: 35px;
+
+    display: flex;
+    gap: 29.5px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.content__container--markers {
+    position: relative;
+    width: 75px;
+    height: 30px;
+    display: flex;
+    gap: 17.54px;
+    justify-content: start;
+    align-items: baseline;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+
+}
+
+.content__container--markers:hover {
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+
+.content__container--marker {
+    position: relative;
+    cursor: pointer;
+}
+

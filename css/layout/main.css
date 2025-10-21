@@ -9,4 +9,10 @@
     height: 783px;
     background-color: #131313;
     position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.body:hover {
+  overflow: auto;
 }
