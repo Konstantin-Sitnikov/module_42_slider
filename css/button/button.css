@@ -1,7 +1,10 @@
+@import url(__arrow/arrow.css);
+
 .button {
+    position: relative;
     border: none;
     background-color: #131313;
     cursor: pointer;
-    width: 41.46px;
-    height: 13.28px;
+    width: 42px;
+    height: 100%;
 }

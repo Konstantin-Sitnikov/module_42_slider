@@ -19,10 +19,11 @@
     position: relative;
     top: 107px;
     left: 626px;
-    width: 623px;
+    width: 679px;
     height: 24px;
     display: flex;
-    gap: 60.5px;
+    justify-content: space-between;
+    gap: 30px;
     overflow-y: hidden;
     overflow-x: hidden;
     scrollbar-width: none;
@@ -30,7 +31,6 @@
 
 .content__container--nav:hover {
     overflow-x: auto;
-    scrollbar-width: thin;
 }
 
 
@@ -47,11 +47,10 @@
 .content__container--selector {
     top: 646px;
     left: 135px;
-    width: 250px;
-    height: 35px;
+    width: 205px;
+    height: 20px;
 
     display: flex;
-    gap: 29.5px;
     justify-content: space-between;
     align-items: center;
 
@@ -60,27 +59,41 @@
 
 .content__container--markers {
     position: relative;
-    width: 75px;
-    height: 30px;
+    width: 80px;
+    height: 100%;
     display: flex;
-    gap: 17.54px;
-    justify-content: start;
-    align-items: baseline;
+
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
 
     overflow-y: hidden;
     overflow-x: hidden;
+    scrollbar-width: none;
 
 
 }
 
 .content__container--markers:hover {
     overflow-x: auto;
-    scrollbar-width: thin;
+
 }
 
 
-.content__container--marker {
+.content__marker {
+
+    min-width:  10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);;
     position: relative;
+
     cursor: pointer;
 }
 
+.content__marker--active {
+    background-color: #FFFFFF;
+}

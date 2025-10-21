@@ -1,0 +1,47 @@
+.button__arrow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    border-right: 1px;
+    border-top: 1px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-style:  solid;
+    border-color: #FFFFFF;
+    box-shadow: none;
+}
+
+
+
+.button__arrow--left {
+    left: 2px;
+    transform: rotate(225deg);
+}
+
+.button__arrow--right {
+    left: 30px;
+    transform: rotate(45deg);
+}
+
+
+
+.button__line {
+    position: absolute;
+    top: 9.5px;
+    width: 41px;
+    height: 1px;
+    border: none;
+    background-color: #FFFFFF;
+    
+}
+
+
+.button__line--left {
+    left: 1px;
+}
+
+
+.button__line--right {
+    left: 0px;
+}

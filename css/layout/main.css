@@ -15,4 +15,5 @@
 
 .body:hover {
   overflow: auto;
+  scrollbar-width: none;
 }

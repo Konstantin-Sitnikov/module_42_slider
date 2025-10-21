@@ -28,7 +28,11 @@ const data = [
 		"repair time": 3,
 		"repair rcost": "Upon request",
 		"img sqr": "images/Rostov-on-Don_patriotic.png"
-	}
+	},
+
+
+
+
 ]
 
 
@@ -56,20 +60,23 @@ function getNavAndMarkerToHtml(list) {
 	const contentContainerNav = document.querySelector(".content__container--nav")
 	const contentContainerMarkers = document.querySelector(".content__container--markers")
 
-	for (obj of list) {
+	const firstObject = list[0]
+	const remainingList = list.slice(1)
+
+	contentContainerNav.innerHTML += `<span data-id="${firstObject.id}" class="content__header content__header--nav content__header--active">${firstObject.city}, ${firstObject.district}</span>`
+	contentContainerMarkers.innerHTML += `<div data-id="${firstObject.id}" class="content__marker content__marker--active"></div>`
+
+
+	for (obj of remainingList) {
 		contentContainerNav.innerHTML += `<span data-id="${obj.id}" class="content__header content__header--nav">${obj.city}, ${obj.district}</span>`
-		contentContainerMarkers.innerHTML += `<div data-id="${obj.id}" class="content__container content__container--marker">
-                            
-												<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<rect width="9.56667" height="9.56667" rx="4.78333" fill="white" fill-opacity="0.3"/>
-												</svg>
-											 </div>`
+		contentContainerMarkers.innerHTML += `<div data-id="${obj.id}" class="content__marker"></div>`
 	}
 
+	getInfoToHtml(firstObject)
 
 }
 
-getInfoToHtml(data[0])
+
 
 getNavAndMarkerToHtml(data)
 
