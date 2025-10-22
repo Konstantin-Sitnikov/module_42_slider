@@ -1,7 +1,7 @@
 
 const data = [
 	{
-		"id":1,
+		"id": 1,
 		"city": "Rostov-on-Don",
 		"district": "Admiral",
 		"apartment area": 81,
@@ -39,7 +39,8 @@ const data = [
 const chatBody = document.querySelector(".chat__container--body")
 
 
-function getInfoToHtml (object) {
+
+function addInfoToHtml (object) {
 
 	const contentTextCity = document.querySelector(".content__text--city")
 	const contentTextArea = document.querySelector(".content__text--area")
@@ -56,7 +57,7 @@ function getInfoToHtml (object) {
 
 }
 
-function getNavAndMarkerToHtml(list) {
+function addNavAndMarkerToHtml(list) {
 	const contentContainerNav = document.querySelector(".content__container--nav")
 	const contentContainerMarkers = document.querySelector(".content__container--markers")
 
@@ -72,11 +73,74 @@ function getNavAndMarkerToHtml(list) {
 		contentContainerMarkers.innerHTML += `<div data-id="${obj.id}" class="content__marker"></div>`
 	}
 
-	getInfoToHtml(firstObject)
+	addInfoToHtml(firstObject)
 
+}
+
+addNavAndMarkerToHtml(data)
+
+
+const contentMarker = document.getElementsByClassName("content__marker")
+const contentHeaderNav = document.getElementsByClassName("content__header--nav")
+
+
+
+function deleteActiveClass (list) {
+	for (elem of list) {
+		elem.classList.remove("content__marker--active", "content__header--active")
+	}
 }
 
 
 
-getNavAndMarkerToHtml(data)
+function addActiveClass (dataSetId, list) {
+	for (elem of list) {
+		if (elem.dataset.id === dataSetId) {
+			if(elem.classList.contains("content__marker")) {
+				elem.classList.add("content__marker--active")
+			}
+			if(elem.classList.contains("content__header--nav")) {
+				elem.classList.add("content__header--active")
+			}
+		}
+	}
+}
 
+
+function changingPositionActiveClasses (dataSetId) {
+			deleteActiveClass(contentMarker)
+			deleteActiveClass(contentHeaderNav)
+			addActiveClass(dataSetId, contentMarker)
+			addActiveClass(dataSetId, contentHeaderNav)
+}
+
+
+
+function addEventClickToHtml (list) {
+	for (let object of list) {
+		object.addEventListener("click",  function(){
+			changingPositionActiveClasses(this.dataset.id)
+			searchAddInfoToHtml(this.dataset.id)
+		});
+	}
+}
+
+addEventClickToHtml(contentMarker)
+addEventClickToHtml(contentHeaderNav)
+
+function searchAddInfoToHtml(dataSetId) {
+	
+	for (elem of data) {
+		if (elem.id === Number(dataSetId)) {
+			addInfoToHtml(data[data.indexOf(elem)]) 
+		}
+	}
+}
+
+
+/*function() {
+		contentMarker.forEach((marker) => 
+			marker.classList.remove("content__marker--active"));
+
+		this.classList.add("content__marker--active")
+	}*/
