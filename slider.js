@@ -31,14 +31,15 @@ const data = [
 	},
 
 
-
-
 ]
 
 
 const chatBody = document.querySelector(".chat__container--body")
+const contentMarker = document.getElementsByClassName("content__marker")
+const contentHeaderNav = document.getElementsByClassName("content__header--nav")
+let currentNumber = 0
 
-
+console.log(currentNumber)
 
 function addInfoToHtml (object) {
 
@@ -61,7 +62,7 @@ function addNavAndMarkerToHtml(list) {
 	const contentContainerNav = document.querySelector(".content__container--nav")
 	const contentContainerMarkers = document.querySelector(".content__container--markers")
 
-	const firstObject = list[0]
+	const firstObject = list[currentNumber]
 	const remainingList = list.slice(1)
 
 	contentContainerNav.innerHTML += `<span data-id="${firstObject.id}" class="content__header content__header--nav content__header--active">${firstObject.city}, ${firstObject.district}</span>`
@@ -80,8 +81,7 @@ function addNavAndMarkerToHtml(list) {
 addNavAndMarkerToHtml(data)
 
 
-const contentMarker = document.getElementsByClassName("content__marker")
-const contentHeaderNav = document.getElementsByClassName("content__header--nav")
+
 
 
 
@@ -132,15 +132,38 @@ function searchAddInfoToHtml(dataSetId) {
 	
 	for (elem of data) {
 		if (elem.id === Number(dataSetId)) {
-			addInfoToHtml(data[data.indexOf(elem)]) 
+			currentNumber = data.indexOf(elem)
+			console.log(currentNumber)
+			addInfoToHtml(data[currentNumber]) 
 		}
 	}
 }
 
 
-/*function() {
-		contentMarker.forEach((marker) => 
-			marker.classList.remove("content__marker--active"));
+function clickRightButton () {
 
-		this.classList.add("content__marker--active")
-	}*/
+	if (currentNumber < (data.length - 1)) {
+		currentNumber += 1
+	} else {
+		currentNumber = 0
+	}	
+		console.log (currentNumber)
+		const obj = data[currentNumber]
+	addInfoToHtml(obj)
+	changingPositionActiveClasses(String(obj.id))
+}
+
+
+function clickLeftButton() {
+	
+	if (currentNumber > 0 ) {
+		currentNumber -= 1
+	} else {
+		currentNumber = (data.length - 1)
+	}	
+		console.log (currentNumber)
+		const obj = data[currentNumber]
+	addInfoToHtml(obj)
+	changingPositionActiveClasses(String(obj.id))
+
+}
