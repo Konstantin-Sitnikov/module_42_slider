@@ -27,7 +27,7 @@ const data = [
 		"apartment area": 93,
 		"repair time": 3,
 		"repair rcost": "Upon request",
-		"img sqr": "images/Rostov-on-Don_patriotic.png"
+		"img sqr": "images/image_3.png"
 	},
 
 
